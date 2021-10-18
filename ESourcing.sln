@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sourcing", "Sourcing", "{7D
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E9913CA1-4035-42A8-958B-B793F96FCF06}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Esourcing.Sourcing", "Esourcing.Sourcing\Esourcing.Sourcing.csproj", "{8C527A20-B0CE-44F0-966A-A4079A61A85C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,18 @@ Global
 		{E9913CA1-4035-42A8-958B-B793F96FCF06}.Release|x64.Build.0 = Release|Any CPU
 		{E9913CA1-4035-42A8-958B-B793F96FCF06}.Release|x86.ActiveCfg = Release|Any CPU
 		{E9913CA1-4035-42A8-958B-B793F96FCF06}.Release|x86.Build.0 = Release|Any CPU
+		{8C527A20-B0CE-44F0-966A-A4079A61A85C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C527A20-B0CE-44F0-966A-A4079A61A85C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C527A20-B0CE-44F0-966A-A4079A61A85C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8C527A20-B0CE-44F0-966A-A4079A61A85C}.Debug|x64.Build.0 = Debug|Any CPU
+		{8C527A20-B0CE-44F0-966A-A4079A61A85C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8C527A20-B0CE-44F0-966A-A4079A61A85C}.Debug|x86.Build.0 = Debug|Any CPU
+		{8C527A20-B0CE-44F0-966A-A4079A61A85C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C527A20-B0CE-44F0-966A-A4079A61A85C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C527A20-B0CE-44F0-966A-A4079A61A85C}.Release|x64.ActiveCfg = Release|Any CPU
+		{8C527A20-B0CE-44F0-966A-A4079A61A85C}.Release|x64.Build.0 = Release|Any CPU
+		{8C527A20-B0CE-44F0-966A-A4079A61A85C}.Release|x86.ActiveCfg = Release|Any CPU
+		{8C527A20-B0CE-44F0-966A-A4079A61A85C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,6 +84,7 @@ Global
 		{3245634D-62C6-40B1-A8F8-2F8326C7C2D0} = {C3A46F81-8616-4A1E-826A-9663D25F791C}
 		{07E6ED14-7E41-4349-8F6B-49604F7B520C} = {C3A46F81-8616-4A1E-826A-9663D25F791C}
 		{7D42411C-DCA6-476C-B0EE-32E02361D370} = {C3A46F81-8616-4A1E-826A-9663D25F791C}
+		{8C527A20-B0CE-44F0-966A-A4079A61A85C} = {7D42411C-DCA6-476C-B0EE-32E02361D370}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {972A1B5A-2B78-46FB-B233-39C2362AF3DC}
