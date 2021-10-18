@@ -2,7 +2,6 @@
 using ESourcing.Products.Entities;
 using ESourcing.Products.Settings;
 using MongoDB.Driver;
-using System;
 
 namespace ESourcing.Products.Data
 {
