@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace EventBusRabbitMQ
 {
-    public class DefaultRabbitMQPersistentConnection : IRabbitMQPersistentConnection
+    public class DefaultRabbitMQPersistentConnection: IRabbitMQPersistentConnection
     {
         private readonly IConnectionFactory _connectionFactory;
         private IConnection _connection;
@@ -46,9 +46,9 @@ namespace EventBusRabbitMQ
             var policy = RetryPolicy.Handle<SocketException>()
                 .Or<BrokerUnreachableException>()
                 .WaitAndRetry(_retryCount, retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)), (ex, time) =>
-                     {
-                         _logger.LogWarning(ex, "RabbitMQ Client could not connect after {TimeOut}s ({RxceptionMessage})", $"{time.TotalSeconds:n1}", ex.Message);
-                     });
+                {
+                    _logger.LogWarning(ex, "RabbitMQ Client could not connect after {TimeOut}s ({RxceptionMessage})", $"{time.TotalSeconds:n1}", ex.Message);
+                });
 
             policy.Execute(() =>
             {
@@ -124,7 +124,5 @@ namespace EventBusRabbitMQ
             }
 
         }
-
-
     }
 }
