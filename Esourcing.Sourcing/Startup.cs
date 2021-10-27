@@ -1,5 +1,6 @@
 using Esourcing.Sourcing.Data;
 using Esourcing.Sourcing.Data.Interface;
+using Esourcing.Sourcing.Hubs;
 using Esourcing.Sourcing.Repositories;
 using Esourcing.Sourcing.Repositories.Interface;
 using Esourcing.Sourcing.Settings;
@@ -88,6 +89,16 @@ namespace Esourcing.Sourcing
 
             #endregion
 
+
+            services.AddCors(o => o.AddPolicy("CorsPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader()
+                        .AllowCredentials()
+                        .WithOrigins("https://localhost:44398");
+            }));
+            services.AddSignalR();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -101,9 +112,11 @@ namespace Esourcing.Sourcing
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseCors("CorsPolicy");
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapHub<AuctionHub>("/auctionhub");
                 endpoints.MapControllers();
             });
 
