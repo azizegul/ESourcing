@@ -66,37 +66,31 @@
                         </div>*@
                 </div>
                 <ul class="nav pcoded-inner-navbar ">
-                    @if (SignInManager.IsSignedIn(User))
-                    {
-                        <li class="nav-item pcoded-menu-caption">
-                            <label>Menü</label>
-                        </li>
-                        <li class="nav-item pcoded-hasmenu">
-                            <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layers"></i></span><span class="pcoded-mtext">Auction Operation</span><span class="pcoded-badge badge badge-success">100+</span></a>
-                            <ul class="pcoded-submenu">
-                                <li><a asp-controller="Auction" asp-action="Index">Auction List</a></li>
-                                <li><a asp-controller="Auction" asp-action="Create">Auction Create</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item pcoded-hasmenu">
-                            <a asp-controller="Home" asp-action="LogOut"><span class="pcoded-micon"><i class="feather icon-users"></i></span><span class="pcoded-mtext">Log Out</span></a>
-                            @*<ul class="pcoded-submenu">
-                    <li><a asp-controller="Home" asp-action="SignUp">Sign Up</a></li>
-                    <li><a asp-controller="Home" asp-action="Login">Login</a></li>
-                </ul>*@
-                        </li>
 
-                    }
-                    else
-                    {
-                        <li class="nav-item pcoded-hasmenu">
-                            <a class="nav-link"><span class="pcoded-micon"><i class="feather icon-users"></i></span><span class="pcoded-mtext">User</span></a>
-                            <ul class="pcoded-submenu">
-                                <li><a asp-controller="Home" asp-action="SignUp">Sign Up</a></li>
-                                <li><a asp-controller="Home" asp-action="Login">Login</a></li>
-                            </ul>
-                        </li>
-                    }
+                    <li class="nav-item pcoded-menu-caption">
+                        <label>Menü</label>
+                    </li>
+                    <li class="nav-item pcoded-hasmenu">
+                        <a class="nav-link"><span class="pcoded-micon"><i class="feather icon-users"></i></span><span class="pcoded-mtext">User</span></a>
+                        <ul class="pcoded-submenu">
+                            <li><a asp-controller="Home" asp-action="SignUp">Sign Up</a></li>
+                            <li><a asp-controller="Home" asp-action="Login">Login</a></li>
+                        </ul>
+                    </li>
+                    @*<li class="nav-item pcoded-hasmenu">
+                        <a asp-action="SignUp" class="nav-link"><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Sign Up</span></a>
+                    </li>
+                    <li class="nav-item pcoded-hasmenu">
+                        <a asp-action="Login" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Login</span></a>
+                    </li>*@
+                    <li class="nav-item pcoded-hasmenu">
+                        <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layers"></i></span><span class="pcoded-mtext">Widget</span><span class="pcoded-badge badge badge-success">100+</span></a>
+                        <ul class="pcoded-submenu">
+                            <li><a href="widget-statistic.html">Statistic</a></li>
+                            <li><a href="widget-data.html">Data</a></li>
+                            <li><a href="widget-chart.html">Chart</a></li>
+                        </ul>
+                    </li>
 
                 </ul>
 
@@ -128,13 +122,15 @@
                 </div>
             </div>
             <!-- [ breadcrumb ] end -->
-
-            @RenderBody()
+           
         </div>
     </div>
 
     <!-- Required Js -->
+
     <script src="/js/vendor-all.min.js"></script>
+    <script src="~/lib/jquery-validate/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
     <script src="/js/plugins/bootstrap.min.js"></script>
     <script src="/js/ripple.js"></script>
     <script src="/js/pcoded.min.js"></script>
